@@ -5,61 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Projetos</title>
+    <title>Projetos - ONG Elo Solidário</title>
 
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
 
-
-    <nav class="menu">
-
-        <input type="checkbox" id="menu-toggle">
-
-        <label for="menu-toggle" class="menu-icon">
-            ☰
-        </label>
+    <nav class="menu" aria-label="Navegação principal">
 
         <ul class="menu-lista">
-
-            <li>
-                <a href="index.html">Início</a>
-            </li>
-
-            <li class="tem-submenu">
-
-                <a href="projetos.html">Projetos</a>
-
-                <ul class="submenu">
-                    <li><a href="#campanhas">Campanhas</a></li>
-                    <li><a href="#doacoes">Doações</a></li>
-                    <li><a href="#voluntariado">Voluntariado</a></li>
-                </ul>
-
-            </li>
-
-            <li>
-                <a href="cadastro.html">Cadastro</a>
-            </li>
-
+            <li><a href="index.html#inicio">Início</a></li>
+            <li><a href="index.html#projetos">Projetos</a></li>
+            <li><a href="index.html#cadastro">Cadastro</a></li>
         </ul>
 
     </nav>
-
 
     <main>
 
         <h1>Projetos da ONG Elo Solidário</h1>
 
-
-        <section class="card" id="campanhas">
+        <section class="card">
 
             <h2>Campanhas e Projetos</h2>
 
-            <span class="badge">
-                Projeto ativo
-            </span>
+            <span class="badge">Projeto ativo</span>
 
             <p>
                 A ONG Elo Solidário desenvolve campanhas e projetos sociais
@@ -67,7 +38,6 @@
             </p>
 
             <picture>
-
                 <source
                     srcset="../imagens/projeto-alimentos.webp"
                     type="image/webp">
@@ -75,17 +45,11 @@
                 <img
                     src="../imagens/projeto-alimentos.jpg"
                     alt="Voluntários preparando caixas com alimentos para doação">
-
             </picture>
-
-            <a href="#modal-info" class="botao-link">
-                Saiba mais
-            </a>
 
         </section>
 
-
-        <section class="card" id="doacoes">
+        <section class="card">
 
             <h2>Doações</h2>
 
@@ -99,7 +63,6 @@
             </div>
 
             <picture>
-
                 <source
                     srcset="../imagens/doacao-alimentos.webp"
                     type="image/webp">
@@ -107,13 +70,11 @@
                 <img
                     src="../imagens/doacao-alimentos.jpg"
                     alt="Alimentos organizados para serem distribuídos em uma ação solidária">
-
             </picture>
 
         </section>
 
-
-        <section class="card" id="voluntariado">
+        <section class="card">
 
             <h2>Voluntariado</h2>
 
@@ -122,53 +83,13 @@
                 contribuindo com seu tempo e suas habilidades.
             </p>
 
-            <p>
-                Quem quiser participar pode realizar o cadastro de voluntário
-                pelo formulário disponível no site.
-            </p>
-
-            <a href="cadastro.html" class="botao-link">
+            <a href="index.html#cadastro" class="botao-link">
                 Quero ser voluntário
             </a>
 
         </section>
 
-
-        <div class="toast">
-            Obrigado por apoiar a ONG Elo Solidário!
-        </div>
-
     </main>
-
-
-    <div id="modal-info" class="modal">
-
-        <div class="modal-conteudo">
-
-            <a
-                href="#"
-                class="modal-fechar"
-                aria-label="Fechar modal">
-                ×
-            </a>
-
-            <h2>Projeto de arrecadação</h2>
-
-            <p>
-                Esta campanha arrecada alimentos e outros itens essenciais
-                para apoiar famílias e comunidades em situação de necessidade.
-            </p>
-
-            <a href="cadastro.html" class="botao-link">
-                Participar
-            </a>
-
-        </div>
-
-    </div>
-
-
-    <script src="../js/script.js"></script>
 
 </body>
 

@@ -1,7 +1,4 @@
 :root {
-
-    /* Cores */
-
     --cor-primaria: #2E7D32;
     --cor-secundaria: #66BB6A;
     --cor-destaque: #F9A825;
@@ -11,17 +8,11 @@
     --cor-texto-claro: #666666;
     --cor-borda: #DDDDDD;
 
-
-    /* Tipografia */
-
     --fonte-pequena: 14px;
     --fonte-base: 16px;
     --fonte-media: 20px;
     --fonte-grande: 28px;
     --fonte-destaque: 36px;
-
-
-    /* Espaçamentos */
 
     --espaco-1: 4px;
     --espaco-2: 8px;
@@ -31,26 +22,32 @@
 }
 
 
-/* Configurações gerais */
-
 * {
     box-sizing: border-box;
 }
 
+
 body {
     margin: 0;
+
     font-family: Arial, sans-serif;
+    font-size: var(--fonte-base);
+
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
 }
 
+
 header {
     display: flex;
     flex-direction: column;
+
     align-items: center;
+
     gap: var(--espaco-2);
 
     padding: var(--espaco-4);
+
     text-align: center;
 }
 
@@ -59,21 +56,26 @@ header {
 
 .menu {
     position: relative;
+
     background-color: var(--cor-branca);
 }
+
 
 #menu-toggle {
     display: none;
 }
 
+
 .menu-icon {
     display: none;
 
     font-size: 28px;
+
     cursor: pointer;
 
     padding: var(--espaco-3);
 }
+
 
 .menu-lista {
     display: flex;
@@ -86,61 +88,35 @@ header {
     list-style: none;
 
     padding: var(--espaco-3);
+
     margin: 0;
 }
 
+
 .menu-lista a {
     color: var(--cor-texto);
+
     text-decoration: none;
 }
+
 
 .menu-lista a:hover {
     color: var(--cor-primaria);
 }
 
 
-/* Dropdown */
+.menu-lista a:focus,
+button:focus,
+.botao-link:focus {
+    outline: 3px solid var(--cor-destaque);
 
-.tem-submenu {
-    position: relative;
-}
-
-.submenu {
-
-    display: none;
-
-    position: absolute;
-
-    top: 100%;
-    left: 0;
-
-    min-width: 170px;
-
-    background-color: var(--cor-branca);
-
-    padding: var(--espaco-2);
-
-    list-style: none;
-
-    border: 1px solid var(--cor-borda);
-
-    z-index: 10;
-}
-
-.submenu li {
-    padding: var(--espaco-2);
-}
-
-.tem-submenu:hover .submenu,
-.tem-submenu:focus-within .submenu {
-    display: block;
+    outline-offset: 3px;
 }
 
 
-/* GRID DE 12 COLUNAS */
+/* GRID */
 
 main {
-
     display: grid;
 
     grid-template-columns: repeat(12, 1fr);
@@ -154,20 +130,23 @@ main {
     padding: var(--espaco-4);
 }
 
+
 main > h1,
 main > form {
     grid-column: 1 / -1;
 }
+
 
 main > section {
     grid-column: span 12;
 }
 
 
-/* Imagens */
+/* IMAGENS */
 
 img {
     max-width: 100%;
+
     height: auto;
 }
 
@@ -175,7 +154,6 @@ img {
 /* CARDS */
 
 .card {
-
     background-color: var(--cor-branca);
 
     padding: var(--espaco-4);
@@ -189,21 +167,20 @@ img {
     transition: 0.3s;
 }
 
-.card:hover {
 
+.card:hover {
     transform: translateY(-4px);
 
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
 
-/* Badge */
+/* BADGE */
 
 .badge {
-
     display: inline-block;
 
-    background-color: var(--cor-secundaria);
+    background-color: var(--cor-primaria);
 
     color: var(--cor-branca);
 
@@ -215,11 +192,12 @@ img {
 }
 
 
-/* Alerta */
+/* ALERTA */
 
 .alerta {
-
     background-color: #FFF3CD;
+
+    color: var(--cor-texto);
 
     border: 1px solid var(--cor-destaque);
 
@@ -231,10 +209,9 @@ img {
 }
 
 
-/* Toast */
+/* TOAST */
 
 .toast {
-
     grid-column: 1 / -1;
 
     width: 100%;
@@ -251,11 +228,10 @@ img {
 }
 
 
-/* Botão e links com aparência de botão */
+/* BOTÕES */
 
 button,
 .botao-link {
-
     display: inline-block;
 
     background-color: var(--cor-primaria);
@@ -275,26 +251,20 @@ button,
     transition: 0.3s;
 }
 
+
 button:hover,
 .botao-link:hover {
-
-    background-color: var(--cor-secundaria);
+    background-color: #1B5E20;
 }
 
-button:focus,
-.botao-link:focus {
-
-    outline: 3px solid var(--cor-destaque);
-}
 
 button:active,
 .botao-link:active {
-
     opacity: 0.8;
 }
 
-button:disabled {
 
+button:disabled {
     opacity: 0.5;
 
     cursor: not-allowed;
@@ -304,7 +274,6 @@ button:disabled {
 /* FORMULÁRIO */
 
 form {
-
     display: flex;
 
     flex-direction: column;
@@ -312,8 +281,8 @@ form {
     gap: var(--espaco-3);
 }
 
-fieldset {
 
+fieldset {
     display: flex;
 
     flex-direction: column;
@@ -325,8 +294,8 @@ fieldset {
     padding: var(--espaco-4);
 }
 
-input {
 
+input {
     padding: var(--espaco-2);
 
     border: 2px solid var(--cor-borda);
@@ -334,129 +303,70 @@ input {
     border-radius: 5px;
 }
 
-input:valid {
 
+input:valid {
     border-color: var(--cor-secundaria);
 }
 
-input:invalid {
 
+input:invalid {
     border-color: #C62828;
 }
 
+
 input:focus {
+    outline: 3px solid var(--cor-destaque);
 
-    outline: 2px solid var(--cor-destaque);
+    outline-offset: 2px;
 }
 
 
-/* MODAL */
-
-.modal {
-
-    display: none;
-
-    position: fixed;
-
-    inset: 0;
-
-    background-color: rgba(0, 0, 0, 0.6);
-
-    align-items: center;
-
-    justify-content: center;
-
-    padding: var(--espaco-4);
-
-    z-index: 100;
-}
-
-.modal:target {
-
-    display: flex;
-}
-
-.modal-conteudo {
-
-    position: relative;
-
-    background-color: var(--cor-branca);
-
-    max-width: 500px;
-
-    width: 100%;
-
-    padding: var(--espaco-5);
-
-    border-radius: 10px;
-}
-
-.modal-fechar {
-
-    position: absolute;
-
-    top: 10px;
-
-    right: 15px;
-
-    font-size: 28px;
-
-    color: var(--cor-texto);
-
-    text-decoration: none;
-}
-
-
-/* BREAKPOINT 1 */
+/* RESPONSIVIDADE */
 
 @media (min-width: 480px) {
 
     main {
         padding: var(--espaco-3);
     }
+
 }
 
-
-/* BREAKPOINT 2 */
 
 @media (min-width: 768px) {
 
     main > section {
         grid-column: span 6;
     }
+
 }
 
-
-/* BREAKPOINT 3 */
 
 @media (min-width: 1024px) {
 
     main > section {
         grid-column: span 4;
     }
+
 }
 
-
-/* BREAKPOINT 4 */
 
 @media (min-width: 1280px) {
 
     main {
-
         max-width: 1200px;
 
         gap: var(--espaco-5);
     }
+
 }
 
-
-/* BREAKPOINT 5 */
 
 @media (min-width: 1440px) {
 
     main {
         max-width: 1360px;
     }
+
 }
 
 
@@ -465,12 +375,11 @@ input:focus {
 @media (max-width: 767px) {
 
     .menu-icon {
-
         display: block;
     }
 
-    .menu-lista {
 
+    .menu-lista {
         display: none;
 
         flex-direction: column;
@@ -480,25 +389,9 @@ input:focus {
         gap: var(--espaco-2);
     }
 
+
     #menu-toggle:checked + .menu-icon + .menu-lista {
-
         display: flex;
-    }
-
-    .tem-submenu {
-
-        width: 100%;
-    }
-
-    .submenu {
-
-        position: static;
-
-        display: block;
-
-        border: none;
-
-        padding-left: var(--espaco-3);
     }
 
 }
