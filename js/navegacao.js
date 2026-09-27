@@ -11,7 +11,9 @@ export const paginas = {
             </p>
 
             <picture>
-                <source srcset="/imagem-ong.webp" type="image/webp">
+                <source
+                    srcset="/imagem-ong.webp"
+                    type="image/webp">
 
                 <img
                     src="/imagem-ong.jpg"
@@ -65,7 +67,9 @@ export const paginas = {
 
             <h2>Campanhas e Projetos</h2>
 
-            <span class="badge">Projeto ativo</span>
+            <span class="badge">
+                Projeto ativo
+            </span>
 
             <p>
                 A ONG Elo Solidário desenvolve campanhas e projetos sociais
@@ -90,8 +94,8 @@ export const paginas = {
             <h2>Doações</h2>
 
             <p>
-                As doações ajudam a manter os projetos da ONG e contribuem
-                para que mais pessoas possam ser atendidas.
+                As doações ajudam a manter os projetos da ONG e
+                contribuem para que mais pessoas possam ser atendidas.
             </p>
 
             <div class="alerta">
@@ -120,7 +124,13 @@ export const paginas = {
                 contribuindo com seu tempo e suas habilidades.
             </p>
 
-            <a href="#cadastro" class="botao-link">
+            <p>
+                Quem quiser participar pode acessar a área de cadastro.
+            </p>
+
+            <a
+                href="#cadastro"
+                class="botao-link">
                 Quero ser voluntário
             </a>
 
@@ -142,16 +152,43 @@ export const paginas = {
 
                 <legend>Dados Pessoais</legend>
 
-                <label for="nome">Nome completo:</label>
-                <input type="text" id="nome" name="nome" required>
+                <label for="nome">
+                    Nome completo:
+                </label>
 
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required>
+                <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    required>
 
-                <label for="nascimento">Data de nascimento:</label>
-                <input type="date" id="nascimento" name="nascimento" required>
 
-                <label for="telefone">Telefone:</label>
+                <label for="email">
+                    E-mail:
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required>
+
+
+                <label for="nascimento">
+                    Data de nascimento:
+                </label>
+
+                <input
+                    type="date"
+                    id="nascimento"
+                    name="nascimento"
+                    required>
+
+
+                <label for="telefone">
+                    Telefone:
+                </label>
+
                 <input
                     type="tel"
                     id="telefone"
@@ -160,7 +197,11 @@ export const paginas = {
                     placeholder="(11) 99999-9999"
                     required>
 
-                <label for="cpf">CPF:</label>
+
+                <label for="cpf">
+                    CPF:
+                </label>
+
                 <input
                     type="text"
                     id="cpf"
@@ -171,11 +212,15 @@ export const paginas = {
 
             </fieldset>
 
+
             <fieldset>
 
                 <legend>Endereço</legend>
 
-                <label for="cep">CEP:</label>
+                <label for="cep">
+                    CEP:
+                </label>
+
                 <input
                     type="text"
                     id="cep"
@@ -184,19 +229,52 @@ export const paginas = {
                     placeholder="00000-000"
                     required>
 
-                <label for="endereco">Endereço:</label>
-                <input type="text" id="endereco" name="endereco" required>
 
-                <label for="bairro">Bairro:</label>
-                <input type="text" id="bairro" name="bairro" required>
+                <label for="endereco">
+                    Endereço:
+                </label>
 
-                <label for="cidade">Cidade:</label>
-                <input type="text" id="cidade" name="cidade" required>
+                <input
+                    type="text"
+                    id="endereco"
+                    name="endereco"
+                    required>
 
-                <label for="estado">Estado:</label>
-                <input type="text" id="estado" name="estado" required>
+
+                <label for="bairro">
+                    Bairro:
+                </label>
+
+                <input
+                    type="text"
+                    id="bairro"
+                    name="bairro"
+                    required>
+
+
+                <label for="cidade">
+                    Cidade:
+                </label>
+
+                <input
+                    type="text"
+                    id="cidade"
+                    name="cidade"
+                    required>
+
+
+                <label for="estado">
+                    Estado:
+                </label>
+
+                <input
+                    type="text"
+                    id="estado"
+                    name="estado"
+                    required>
 
             </fieldset>
+
 
             <button type="submit">
                 Enviar cadastro
@@ -222,7 +300,8 @@ export function carregarPagina() {
     const paginaSelecionada =
         paginas[rota] || paginas.inicio;
 
-    conteudoPrincipal.innerHTML = paginaSelecionada;
+    conteudoPrincipal.innerHTML =
+        paginaSelecionada;
 
     return rota;
 }
